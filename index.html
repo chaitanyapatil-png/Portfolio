@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chaitanya Patil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+:root { --bg: #121212; --text: #eee; --accent: #00bfff; --card: rgba(14, 75, 189, 0.1); }
+body { margin: 0; font-family: Arial, sans-serif; background: radial-gradient(circle at center, #1a1a1a 80%, #121212 50%, #000000 100%); color: var(--text); scroll-behavior: smooth; position: relative; }
+.background-circle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 95%; height: 90%; border-top-right-radius: 100%; background: rgba(0, 191, 255, 0.1); border: 5px solid var(--accent); backdrop-filter: blur(60px); z-index: -1; border-top: 2px solid; border-right: 2px solid; }
+header { background: #000; color: var(--text); display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
+.logo { font-weight: bold; color: var(--accent); font-size: 1.5rem; }
+nav ul { list-style: none; display: flex; gap: 1.5rem; }
+nav a { text-decoration: none; color: var(--text); position: relative; }
+nav a::after { content: ''; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px; background: var(--accent); transition: 0.3s; }
+nav a:hover::after, nav a.active::after { width: 100%; }
+.hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
+section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
+#home { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.section-title { font-size: 2rem; margin-bottom: 1rem; }
+.highlight { color: var(--accent); }
+.btn { background: var(--accent); color: #000; padding: 0.7rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 0.5rem; display: inline-block; }
+.btn:hover { background: #0099cc; }
+i { transition: transform 0.3s, color 0.3s; }
+i:hover { color: var(--accent); transform: scale(1.2) rotate(5deg); }
+.social-icons { margin-top: 10rem; display: block; }
+.social-icons a { color: var(--text); font-size: 1.8rem; margin: 0 0.7rem; transition: transform 0.3s; }
+.social-icons a:hover { color: var(--accent); transform: scale(1.2); }
+.card, .project-card { background: var(--card); padding: 1.5rem; border-radius: 8px; backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1); }
+.cards { display: flex; flex-wrap: wrap; gap: 2rem; }
+.card { flex: 1; min-width: 250px; }
+.card h3 { border-bottom: 1px solid #333; margin-bottom: 0.5rem; padding-bottom: 0.5rem; }
+.card ul { list-style: disc inside; }
+#journey .card { max-width: 600px; margin: 0 auto; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+.project-card { overflow: hidden; text-align: center; }
+.project-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; transition: transform 0.4s ease; }
+.project-card h3 { margin: 0.7rem 0; }
+.project-card ul { list-style: disc inside; text-align: left; margin: 0.5rem 0; }
+.project-card:hover img { transform: scale(1.05); }
+#contact p { margin: 0.5rem 0; font-size: 1.2rem; }
+#contact i { margin-right: 0.5rem; color: var(--accent); }
+#contact a { color: inherit; text-decoration: none; }
+#fab-fa-linkedin, #fab-fa-github, #fab-fa-twitter { color: var(--text); font-size: 1.8rem; margin: 0 0.7rem; transition: transform 0.3s; }
+#contact p:hover { color: var(--accent); }
+#contact p:hover i { color: var(--accent); transform: scale(1.2) rotate(5deg); }
+.contact-info { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: center; }
+.contact-info p { margin: 0; white-space: nowrap; }
+@media (max-width: 768px) {
+  nav ul { display: none; flex-direction: column; text-align: center; background: #000; margin-top: 1rem; width: 90%; margin-left: 1px; }
+  nav ul.show { display: none; }
+  .background-circle { border-top-right-radius: 1%; border-top: 2px solid; border-right: 2px solid; height: 76%; }
+  .card { flex: 1; min-width: 150px; }
+  .hamburger { display: none; color: var(--text); }
+  .project-card { flex-direction: column; min-width: 150px; }
+  .projects-grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="logo">CBP</div>
+  <nav>
+    <div class="hamburger"><i class="fas fa-bars"></i></div>
+    <ul>
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About Me</a></li>
+      <li><a href="#journey" class="nav-link">My Journey</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="background-circle"></div>
+
+<section id="home">
+  <h1 class="section-title">Hi, I'm <span class="highlight">CHAITANYA PATIL</span></h1>
+  <p>Passionate web developer crafting stunning and functional web solutions.</p>
+  <pre><a href="#contact" class="btn">Contact Me</a> <a href="#" target="_blank" class="btn"><i class="fas fa-file-download"></i> Resume</a></pre>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/chaitanya-patil-72268b28b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6zsfoSxzRTWnPOuou3A1rg%3D%3D" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/chaitanyapatil-png" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com" target="_blank" ><i class="fab fa-twitter"></i></a>
+  </div>
+</section>
+<section id="about">
+    <h2  class="section-title"> ✨ About Me</h2>
+    <p>I’m Chaitanya Patil, a passionate web developer and cybersecurity enthusiast dedicated to crafting secure, user-friendly websites and applications. With strong skills in both frontend and backend technologies, as well as Python programming, I build responsive, accessible, and efficient digital solutions.
+Alongside web development, I have experience working on cybersecurity projects, focusing on protecting systems and data from vulnerabilities. I enjoy exploring security challenges and applying best practices to safeguard applications.
+Driven by curiosity and continuous learning, I love turning complex problems into simple, elegant solutions. Whether designing clean interfaces, writing robust Python scripts, or enhancing security measures, I prioritize quality and performance.
+When I’m not coding, I stay updated on the latest tech trends and work on personal projects to sharpen my skills and creativity.
+</p>
+    
+  </section>
+<section id="journey">
+  <h2 class="section-title">📚 My Journey</h2>
+  <div class="card">
+    <h3>Bachelor of Computer Applications (BCA)</h3>
+    <p><strong>Duration:</strong> 3 years</p>
+    <p><strong>Skills: </strong> Web Development, DBMS, Software Engineering, Linux OS, C/C++, Python, DS in C++, Java, AI</p>
+    <p><strong>CGPA:</strong> 8.75 | <strong>Percentage:</strong> 74.25% | </p>
+  </div>
+</section>
+
+<!--  -->
+<section id="skills">
+  <h2 class="section-title">🛠️ Skills</h2>
+  <div class="cards">
+    <div class="card">
+      <h3><i class="fas fa-code"></i> Frontend</h3>
+      <ul>
+        <li><i class="fab fa-html5"></i> HTML</li>
+        <li><i class="fab fa-css3-alt"></i> CSS</li>
+        <li><i class="fab fa-js"></i> JavaScript</li>
+        <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><i class="fas fa-database"></i> Backend</h3>
+      <ul>
+        <li><i class="fas fa-server"></i> SQL</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><i class="fas fa-terminal"></i> Programming</h3>
+      <ul>
+        <li><i class="fas fa-code"></i> DSA with C++</li>
+        <li><i class="fab fa-python"></i> Python</li>
+        <li><i class="fab fa-java"></i> Java</li>
+        <li><i class="fas fa-terminal"></i> Bash</li>
+        <li><i class="fas fa-terminal"></i> Shell Scripting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section id="projects">
+  <h2 class="section-title">💼 Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz9fY25EkWarRn-q2ZP0rynuol4bz-75fJww&s" alt="Library Project">
+      <h3>Library</h3>
+      <p>A website for Mangrul students to easily find and access books.</p>
+      <ul>
+        <li>Book search and filter</li>
+        <li>User-friendly interface</li>
+      </ul>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+      <a href="https://chaitanyapatil-png.github.io/Library/" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCQHAzDrktb_TxZkRYA-0TtMpwdf8uTzfJtw&s" alt="Circle-Clash Project">
+      <h3>Circle-Clash</h3>
+      <p>An engaging Pygame project featuring interactive real-time gameplay.</p>
+      <ul>
+        <li>Real-time circle collection and strategy</li>
+        <li>Bot AI opponent</li>
+      </ul>
+      <p><strong>Tech:</strong> Python, Pygame</p>
+      <a href="https://github.com/chaitanyapatil-png/Circle-Clash.git" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpRetsD_O8DisUqxcVnEB3QF6qaFAKcwt6xw&s" alt="Alarm Project">
+      <h3>Alarm</h3>
+      <p>Python-based alarm system with voice notifications and scheduling.</p>
+      <ul>
+        <li>Set multiple alarms</li>
+        <li>Text-to-speech alerts</li>
+      </ul>
+      <p><strong>Tech:</strong> Python, Flask</p>
+      <a href="https://github.com/chaitanyapatil-png/Alarm.git" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="https://passcamp.com/blog/should-you-trust-google-chrome-password-manager/images/Google-Chrome-password-manager-1.png" alt="Password Manager Project">
+      <h3>Password Manager</h3>
+      <p>Secure password manager with encryption and master password protection.</p>
+      <ul>
+        <li>Encrypted storage</li>
+        <li>Master password authentication</li>
+      </ul>
+      <p><strong>Tech:</strong> Python, Flask</p>
+      <a href="https://github.com/chaitanyapatil-png/password-manager.git" class="btn">View Project</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact">
+  <h2 class="section-title">📞 Get in Touch</h2>
+  <div class="contact-info">
+    <a href="chaitanyapatil939@gmail.com" target="_blank">
+      <i class="fas fa-envelope contact-icon"></i> chaitanyapatil939@gmail.com
+    </a>
+    <a href="tel:+12345678901">
+      <i class="fas fa-phone contact-icon"></i> +1 234 567 8901
+    </a>
+    <a href="https://www.linkedin.com/in/chaitanya-patil-72268b28b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6zsfoSxzRTWnPOuou3A1rg%3D%3D" target="_blank" id="fab-fa-linkedin"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/chaitanyapatil-png" target="_blank" id="fab-fa-github"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com" target="_blank" id="fab-fa-twitter"><i class="fab fa-twitter"></i></a>
+  </div>
+</section>
+
+
+<script>
+  const navLinks = document.querySelectorAll('.nav-link');
+  window.addEventListener('scroll', () => {
+    let fromTop = window.scrollY + 80;
+    navLinks.forEach(link => {
+      const section = document.querySelector(link.hash);
+      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+
+  const hamburger = document.querySelector('.hamburger');
+  const navUL = document.querySelector('nav ul');
+  hamburger.addEventListener('click', () => {
+    navUL.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>
