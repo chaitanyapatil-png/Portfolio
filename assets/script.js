@@ -135,7 +135,7 @@ function initTypedEffect() {
   const typedEl = document.querySelector('.typed-text');
   if (!typedEl) return;
 
-  const words = ['Cybersecurity Enthusiast', 'Python Developer', 'Linux Enthusiast', 'Web Security Researcher', 'Ethical Hacking Learner'];
+  const words = ['Cybersecurity Enthusiast'];
   let wordIdx = 0;
   let charIdx = 0;
   let isDeleting = false;
